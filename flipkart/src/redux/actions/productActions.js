@@ -2,7 +2,7 @@ import axios from "axios";
 
 import * as actionTypes from '../constants/productConstant';
 
-const URL = 'https://flipkart-clone-api.vercel.app/';
+const URL = 'https://flipkart-clone-api.vercel.app' || 'http://localhost:8000';
 
 // in redux we have call api we dispatch that values . we will use hook useReducer .dispatch function  internally calls reducer. befor dispatch we will need middleware we will use thunk
 // async ()=> is our middleware we have call our api through middleware.middleware gives access of dispatch.

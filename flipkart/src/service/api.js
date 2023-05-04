@@ -1,6 +1,6 @@
 // try fetch in javascript we are using axios
 import axios from 'axios';
-const URL = 'https://flipkart-clone-api.vercel.app/';
+const URL = 'https://flipkart-clone-api.vercel.app/' || 'http://localhost:8000';
 // asyncronous request
 export const authenticateSignup =async (data) => {
     try {

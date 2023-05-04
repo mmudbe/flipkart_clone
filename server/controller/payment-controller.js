@@ -60,7 +60,7 @@ console.log(request.body);
                 post_res.on('end', function () {
                     let result = JSON.parse(res);
                     console.log(result);
-                    response.redirect(`http://localhost:3000/`)
+                    response.redirect(`/`)
                 });
             });
             post_req.write(post_data);
