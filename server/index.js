@@ -23,9 +23,17 @@ app.use('/',router);
 const USERNAME = process.env.DB_USERNAME ;
 const PASSWORD = process.env.DB_PASSWORD ;
 
-connection(USERNAME , PASSWORD);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
+
+const URL =process.env.MONGODB_URI|| `mongodb://${USERNAME}:${PASSWORD}@ac-glg1yq0-shard-00-00.foqvudz.mongodb.net:27017,ac-glg1yq0-shard-00-01.foqvudz.mongodb.net:27017,ac-glg1yq0-shard-00-02.foqvudz.mongodb.net:27017/?ssl=true&replicaSet=atlas-gry79t-shard-0&authSource=admin&retryWrites=true&w=majority`;
+connection(URL);
+
+
+// if(process.env.NODE_ENV==="production"){
+//     app.use(express.static('client/build'))
+// }
+
 app.listen(PORT , () =>
  console.log(`server is running on PORT ${PORT}`)
 );
@@ -54,6 +62,6 @@ paytmParams['INDUSTRY_TYPE_ID'] = process.env.PAYTM_INDUSTRY_TYPE_ID,
 paytmParams['ORDER_ID'] = uuid(),
 paytmParams['CUST_ID'] = process.env.PAYTM_CUST_ID,
 paytmParams['TXN_AMOUNT'] = '100',
-paytmParams['CALLBACK_URL'] = 'http://localhost:8000/callback'
+paytmParams['CALLBACK_URL'] = '/callback'
 paytmParams['EMAIL'] = 'kunaltyagi@gmail.com'
 paytmParams['MOBILE_NO'] = '1234567852'
