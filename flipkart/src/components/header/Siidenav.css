@@ -1,0 +1,24 @@
+
+/* Define the styles for the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -25%;
+    z-index: 9999;
+    width: 200px;
+    height: 100%;
+    background-color: #f7fafc;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Define the styles for the content area */
+  .content {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  
+  /* Show the sidebar when it's open */
+  .sidebar.open {
+    left: 0;
+  }
