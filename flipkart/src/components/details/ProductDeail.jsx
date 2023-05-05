@@ -7,11 +7,11 @@ export default function ProductDeail({product}) {
   const date = new Date(new Date().getTime()+(5*24*60*60*1000));
   return (
     <div>
-         <div className="flex   bg-white">
-                <div className="">
+         <div className="flex   bg-white max-lg:flex-wrap ">
+                <div className=" pl-12">
                     <ActionItem product={product} />
                 </div>
-                <div className="mt-10">
+                <div className="mt-10 pr-12 pl-12 pb-7 w-[70%] max-lg:w-[100%]">
                     <p>{product.title.longTitle}</p>
                     <p className="text-[#878787] text-sm mt-1 ">
                     5 ratings & 9 reviews
@@ -55,9 +55,9 @@ export default function ProductDeail({product}) {
                       <img  src="https://rukminim1.flixcart.com/lockin/774/185/images/CCO__PP_2019-07-14.png?q=50" className='w-[300px]' />
                     </td>
                   </tr>
-                  <tr>
+                  <tr >
                     <td className=' text-[#878787]'>product</td>
-                    <td className=' pl-8 font-semibold'>{product.description} </td>
+                    <td className=' pl-8 font-semibold '>{product.description} </td>
                   </tr>
                 </tbody>
                </table>

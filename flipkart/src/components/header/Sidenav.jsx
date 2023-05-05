@@ -30,7 +30,7 @@ function Sidenav() {
       )}
 
       {/* Sidebar */}
-      <div className={`sidebar  ${isOpen ? 'open' : ''} z-50`}>
+      <div className={`sidebar  ${isOpen ? 'open' : ''} z-50 `}>
         {/* Content */}
         <div className="content">
           <CustomButtons />

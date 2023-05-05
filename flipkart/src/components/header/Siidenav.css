@@ -3,7 +3,7 @@
 .sidebar {
     position: fixed;
     top: 0;
-    left: -25%;
+    left: -50%;
     z-index: 9999;
     width: 200px;
     height: 100%;
@@ -22,3 +22,4 @@
   .sidebar.open {
     left: 0;
   }
+ 

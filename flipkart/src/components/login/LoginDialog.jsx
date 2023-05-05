@@ -151,11 +151,11 @@ const loginInitialValues = {
 
 
     return (
-       <Dialog open={open} onClose={handleClose} PaperProps={{sx: {maxWidth:'unset'}}}>
+       <Dialog className=" max-md:ml-[170px] max-md:w-[70vw]" open={open} onClose={handleClose} PaperProps={{sx: {maxWidth:'unset'}}}>
 
-        <Component style={{display:'flex'}}>
+        <Component  className='flex '>
       {/* left part */}
-            <Image>
+            <Image className='max-md:hidden'>
              <Typography variant='h5'>{account.heading}</Typography>
              <Typography style={{marginTop:20}}>{account.subHeading}</Typography>
             </Image>
